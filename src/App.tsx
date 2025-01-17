@@ -1,7 +1,9 @@
+import {Typography } from "@mui/material";
+
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <Typography variant="h1">Hello World</Typography>
+  );
+};
 
-export default App
+export default App;
