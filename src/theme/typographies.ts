@@ -9,7 +9,7 @@ export default {
     fontSize: "3.6rem", // Base font size
     fontWeight:400,
     lineHeight: "4.4rem",
-    color:colorPalette.texts.main,
+    color:colorPalette.text.primary,
     [createTheme().breakpoints.up(breakpoints.lg)]: {
       fontSize: "4rem", // Font size for lg screens
       lineHeight: "5.4rem",
@@ -19,7 +19,7 @@ export default {
     fontSize: "2.4rem",
     fontWeight:400,
     lineHeight: "3.6rem",
-    color:colorPalette.texts.main,
+    color:colorPalette.text.primary,
     [createTheme().breakpoints.up(breakpoints.lg)]: {
       fontSize: "3rem",
       lineHeight: "4.5rem",
@@ -28,12 +28,11 @@ export default {
   h3: {
     fontSize: "1.5rem",
     lineHeight: "2.25rem",
-    color:colorPalette.texts.main,
+    color:colorPalette.text.primary,
     [createTheme().breakpoints.up(breakpoints.lg)]: {
       fontSize: "1.9rem",
     },
   },
-  
-  body1: { fontSize: "1.6rem", lineHeight: "2.4rem", color:colorPalette.texts.main },
-  body2: { fontSize: "1.4rem", lineHeight: "2.1rem", color:colorPalette.texts.main },
+  body1: { fontSize: "1.6rem", lineHeight: "2.4rem", color:colorPalette.text.primary },
+  body2: { fontSize: "1.4rem", lineHeight: "2.1rem", color:colorPalette.text.primary },
 };

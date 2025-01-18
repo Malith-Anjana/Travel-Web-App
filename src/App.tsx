@@ -1,8 +1,18 @@
-import {Typography } from "@mui/material";
-
+import { Box, Container, Toolbar } from "@mui/material";
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
 const App = () => {
   return (
-    <Typography variant="h1">Hello World</Typography>
+    <Box component="div" display="flex" width="100vw">
+      <NavBar />
+      <Container
+        maxWidth="xl"
+        disableGutters
+      >
+        <Toolbar />
+        <Hero/>
+      </Container>
+    </Box>
   );
 };
 

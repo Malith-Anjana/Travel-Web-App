@@ -1,37 +1,39 @@
 // Augment the palette to include a violet color
 declare module '@mui/material/styles' {
     interface Palette {
-      texts: Palette['primary'];
+      accent: Palette['primary'];
     }
   
     interface PaletteOptions {
-      texts?: PaletteOptions['primary'];
+      accent?: PaletteOptions['primary'];
     }
   }
   
   // Update the Button's color options to include a violet option
   declare module '@mui/material/Button' {
     interface ButtonPropsColorOverrides {
-      texts: true;
+      accent: true;
     }
   }
 
 export default {
   primary: {
-    main: "#00897b",
-    light: "#e0f2f1",
-    dark: "#00695c",
-    contrastText: "#004d40"
+    main: "#1bb759",
+    light: "#E8F7EE",
+    dark: "#159247",
   },
   secondary: {
     main: "#039be5",
     light: "#e1f5fe",
     dark: "#0277bd",
-    contrastText: "#01579b",
   },
-  texts:{
-    main: "#11181c",
-    light: "#6A6A6A",
-    dark: "#000",
+  text:{
+    primary: "#11181c",
+    disabled: "#6A6A6A",
+    secondary: "#000000",
+  },
+  accent:{                      //for button
+    main: "#000000",
+    light: "#11181c",
   }
 };
