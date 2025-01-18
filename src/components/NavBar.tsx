@@ -56,82 +56,85 @@ const NavBar = ({ window }: Props) => {
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar disableGutters>
-        <Container
-        disableGutters
-        maxWidth="xl" 
-      >
-          <Box
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-            width="100%"
-          >
-            <Box component="div" sx={{ height: "25px" }}>
-              <img src={logo} style={{ height: "inherit" }} />
-            </Box>
-
-            <Box
-              sx={{
-                display: { xs: "none", lg: "block" },
-                justifyContent: "center",
-              }}
-            >
-              {navItems.map((item) => (
-                <Link
-                  to="/item"
-                  key={item}
-                  style={{
-                    textDecoration: "none",
-                    padding: 20,
-                    color: colorPalette.text.secondary,
-                  }}
-                >
-                  {item}
-                </Link>
-              ))}
-            </Box>
+          <Container disableGutters maxWidth="xl">
             <Box
               display="flex"
+              justifyContent="space-between"
               alignItems="center"
-              justifyContent="center"
-              sx={{
-                height: "100%",
-              }}
+              width="100%"
             >
-              <Button color="primary" sx={{paddingY:1.5}}>
-                Get a Quote
-              </Button>
-              <Link to="/about" style={{ textDecoration: "none" }}>
-                <Typography
-                  ml={2}
-                  variant="body1"
-                  component="div"
-                  sx={{
-                    fontWeight: "bold",
-                    display: { xs: "none", lg: "block" },
-                  }}
-                >
-                  {" "}
-                  24/7 Support
-                </Typography>
-              </Link>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="end"
-                onClick={handleDrawerToggle}
-                disableRipple
+              <Box component="div" sx={{ height: "25px" }}>
+                <img src={logo} style={{ height: "inherit" }} />
+              </Box>
+
+              <Box
                 sx={{
-                  display: { lg: "none" },
-                  padding: 2,
-                  marginLeft: { xs: "auto", lg: 0 },
-                  color: colorPalette.text.primary,
+                  display: { xs: "none", lg: "block" },
+                  justifyContent: "center",
                 }}
               >
-                <MenuIcon />
-              </IconButton>
+                {navItems.map((item) => (
+                  <Link
+                    to="/item"
+                    key={item}
+                    style={{
+                      textDecoration: "none",
+                      padding: 20,
+                      color: colorPalette.text.secondary,
+                    }}
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </Box>
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                sx={{
+                  height: "100%",
+                }}
+              >
+                <Button
+                  color="primary"
+                  sx={{
+                    paddingY: { xs: 0.5, lg: 1.5 },
+                    paddingX: { xs: 1.5, lg: 4 },
+                  }}
+                >
+                  Get a Quote
+                </Button>
+                <Link to="/about" style={{ textDecoration: "none" }}>
+                  <Typography
+                    ml={2}
+                    variant="body1"
+                    component="div"
+                    sx={{
+                      fontWeight: "bold",
+                      display: { xs: "none", lg: "block" },
+                    }}
+                  >
+                    {" "}
+                    24/7 Support
+                  </Typography>
+                </Link>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="end"
+                  onClick={handleDrawerToggle}
+                  disableRipple
+                  sx={{
+                    display: { lg: "none" },
+                    padding: 2,
+                    marginLeft: { xs: "auto", lg: 0 },
+                    color: colorPalette.text.primary,
+                  }}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Box>
             </Box>
-          </Box>
           </Container>
         </Toolbar>
       </AppBar>
